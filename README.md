@@ -37,5 +37,18 @@ A quick statistical breakdown of the analyzed quarter-hourly dataset reveals the
 ## 🚀 Quick Start (Jupyter / Colab)
 1. Clone or download the repository.
 2. Install required dependencies:
+Open german_power_prices.ipynb in Jupyter Notebook or Google Colab and run the cells to process the dataset and generate the analysis curves.
+
+🛠 Core Tech Stack
+Language: Python 3.9+
+
+Data Processing: Pandas, NumPy
+
+Visualization: Matplotlib, Matplotlib Animation (GIF Engine)
+
+Data Source: SMARD.de (Federal Network Agency of Germany)
+
+📄 License
+Distributed under the MIT License. See LICENSE for details.
    ```bash
    pip install pandas numpy matplotlib
