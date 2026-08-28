@@ -1,3 +1,4 @@
+Markdown
 # ⚡ German BESS Arbitrage & High-Frequency Price Optimization
 
 A Python-based engineering toolkit designed to analyze **15-minute high-resolution power market data** from the German/Luxembourg (DE/LU) bidding zone (sourced from **SMARD.de**), model Battery Energy Storage Systems (BESS) dispatch strategies, and visualize intraday volatility and arbitrage margins.
