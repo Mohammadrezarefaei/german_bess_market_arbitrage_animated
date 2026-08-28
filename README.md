@@ -13,6 +13,10 @@ The animation below demonstrates real-time 15-minute price clearing curves on a 
 </p>
 
 ---
+## 📊 Live BESS Dispatch & Arbitrage Simulation (Dark Mode)
+Here is a 15-minute resolution animation showing how the arbitrage heuristic optimizes charging (low prices) and discharging (high prices) to maximize daily profit:
+
+![BESS Arbitrage Animation](bess_arbitrage_dispatch.gif)
 
 ## 📈 Market Data Snapshot (DE/LU Bidding Zone)
 A quick statistical breakdown of the analyzed quarter-hourly dataset reveals the extreme non-linearities that drive high-frequency battery optimization:
