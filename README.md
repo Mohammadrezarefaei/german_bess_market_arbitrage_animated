@@ -1,7 +1,16 @@
 Markdown
 # ⚡ German BESS Arbitrage & High-Frequency Price Optimization
 
-A Python-based engineering toolkit designed to analyze **15-minute high-resolution power market data** from the German/Luxembourg (DE/LU) bidding zone (sourced from **SMARD.de**), model Battery Energy Storage Systems (BESS) dispatch strategies, and visualize intraday volatility and arbitrage margins.
+A Python-based engineering toolkit designed to analyze **15-minute high-resolution power market data** from the German/Luxembourg (DE/LU) bidding zone (sourced from **SMARD.de**), model Battery Energy Storage Systems (BESS) dispatch strategies, and visualize intraday volatility and arbitrage margins using rigorous mathematical optimization.
+
+---
+
+## ⚖️ Model Comparison: Naive Heuristic vs. Linear Programming (LP)
+The animation below contrasts a simplistic peak-shaving heuristic (left) with our rigorous continuous-SoC LP optimization model (right):
+
+<p align="center">
+  <img src="bess_comparison_naive_vs_lp.gif" alt="BESS Comparison Naive vs LP Optimization" width="900"/>
+</p>
 
 ---
 
@@ -20,10 +29,10 @@ This project moves beyond simple data visualization to implement a mathematicall
 ### 🚀 Key Features
 - **Data Engineering:** Automated pipeline for loading, cleaning, and parsing quarter-hourly German day-ahead electricity prices.
 - **Mathematical Optimization (PuLP):** Formulated an LP model respecting physical constraints:
-  - State of Charge (SoC) continuity across time steps ($t-1$ to $t$).
-  - Power capacity limits ($P_{max}$) and energy capacity bounds ($E_{cap}$).
-  - Round-trip efficiency ($\eta = 85\%$).
-- **Dark-Mode Visualizations & Animations:** Dynamic GIF rendering to visualize charging/discharging dispatch patterns over time.
+  - **State of Charge (SoC) Continuity:** Tracks energy state dynamically across time steps ($t-1$ to $t$).
+  - **Power & Capacity Bounds:** Strictly enforces power limits ($P_{max} = 1\text{ MW}$) and energy capacity bounds ($E_{cap} = 2\text{ MWh}$).
+  - **Round-Trip Efficiency:** Accounts for losses via charging and discharging efficiency factors ($\eta = 85\%$).
+- **Dark-Mode Visualizations & Animations:** Dynamic multi-panel GIF rendering to visualize charging/discharging dispatch patterns alongside continuous SoC profiles.
 
 ### 📊 Results Snapshot
 - **Total LP Optimized Arbitrage Profit:** ~2,346 € (across simulated test period)
@@ -47,7 +56,8 @@ A quick statistical breakdown of the analyzed quarter-hourly dataset reveals the
 ## 🗂 Repository Structure
 - **Day-ahead_prices_202608180000_202608290000_Quarterhour.csv** : Raw SMARD.de dataset
 - **bess_lp_arbitrage_results.csv** : Daily optimized LP profit metrics
-- **german_bess_market_arbitrage_animated.gif** : Generated animated execution GIF
+- **german_bess_market_arbitrage_animated.gif** : Generated animated execution GIF (Single panel)
+- **bess_comparison_naive_vs_lp.gif** : Comparative side-by-side execution GIF (Naive vs. LP)
 - **german_power_prices.ipynb** : Full interactive Jupyter Notebook pipeline
 - **README.md** : Project documentation
 
