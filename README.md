@@ -28,18 +28,18 @@ A quick statistical breakdown of the analyzed quarter-hourly dataset reveals the
 ---
 
 ## 🗂 Repository Structure
-```text
-├── Day-ahead_prices_202608180000_202608290000_Quarterhour.csv  # Raw SMARD.de dataset
-├── german_bess_market_arbitrage_animated.gif                     # Generated animated execution GIF
-├── german_power_prices.ipynb                                     # Full interactive Jupyter Notebook pipeline
-└── README.md                                                     # Project documentation
-🚀 Quick Start (Jupyter / Colab)
-Clone or download the repository.
+- **Day-ahead_prices_202608180000_202608290000_Quarterhour.csv** : Raw SMARD.de dataset
+- **german_bess_market_arbitrage_animated.gif** : Generated animated execution GIF
+- **german_power_prices.ipynb** : Full interactive Jupyter Notebook pipeline
+- **README.md** : Project documentation
 
-Install required dependencies:
+---
 
-Bash
-pip install pandas numpy matplotlib
+## 🚀 Quick Start (Jupyter / Colab)
+1. Clone or download the repository.
+2. Install required dependencies:
+   ```bash
+   pip install pandas numpy matplotlib
 Open german_power_prices.ipynb in Jupyter Notebook or Google Colab and run the cells to process the dataset and generate the analysis curves.
 
 🛠 Core Tech Stack
